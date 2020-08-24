@@ -1,6 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        //Пока не решил, см. 2.7
-
+        String row = "";
+        for (int i = 1; i<11; i++) {
+            for (int j = 1; j<11; j++) {
+                row += i*j+" ";
+                }
+            System.out.println(row);
+            row = "";
+            }
+        }
     }
-}
