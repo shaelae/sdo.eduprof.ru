@@ -21,12 +21,11 @@ public class Main {
         String city = reader.readLine();
 
         for (int i=0;i<list.size();i++) {
-            if (list.get(i).contains(city)) {
+            if (list.get(i).equals(city)) {
                 String familyName = list.get(i+1);
                 System.out.println(familyName);
                 break;
-            }
-            if (i==list.size()-1) System.out.println("В этом городе никто не живет.");
+            } else if (i==list.size()-1) System.out.println("В этом городе никто не живет.");
         }
     }
 }
