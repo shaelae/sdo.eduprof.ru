@@ -5,11 +5,15 @@ import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Scanner;
 
 public class proxyCheckerN2 {
     public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите путь к файлу в обычном формате (C:\\folder\\filename.txt)");
+        String path = scanner.nextLine();
 
-        FileReader reader = new FileReader("C:\\Users\\nakor\\Desktop\\ip.txt");
+        FileReader reader = new FileReader(path);
         int c;
         String iplist = "";
 
