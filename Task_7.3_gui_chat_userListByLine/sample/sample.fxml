@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox prefHeight="380" prefWidth="580" styleClass="padding,corners">
+            <children>
+                <Button fx:id="connectButton" onAction="#startClient" prefHeight="25.0" prefWidth="100.0" styleClass="borders" text="Подключиться">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Button>
+                <HBox prefHeight="300" prefWidth="560" styleClass="shadow">
+                    <children>
+                        <VBox prefHeight="300.0" prefWidth="200.0">
+                            <children>
+                                <TextArea fx:id="userList" prefHeight="300.0" prefWidth="200.0" editable="false" focusTraversable="false" styleClass="borders">
+                             <VBox.margin>
+                                <Insets right="10.0" />
+                             </VBox.margin></TextArea>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="114.0" prefWidth="300">
+                            <children>
+                                <TextArea fx:id="messageWindow" prefHeight="300.0" prefWidth="280.0" styleClass="borders" wrapText="true" focusTraversable="false" editable="false" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" minHeight="50.0" prefHeight="50.0" prefWidth="480.0" GridPane.rowIndex="1">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="370.0">
+                            <children>
+                                <TextField fx:id="textField" prefHeight="25.0" prefWidth="450.0" snapToPixel="false" styleClass="borders" onAction="#send" promptText="Нажмите «Подключиться»...">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin></TextField>
+                            </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="20.0" />
+                          <Button fx:id="button" mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="100.0" styleClass="borders" text="Отправить" />
+                    </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</GridPane>
